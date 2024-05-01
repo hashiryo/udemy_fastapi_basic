@@ -20,14 +20,14 @@ async def create_contact(body: contact_schema.Contact):
  return contact_schema.Contact(**body.model_dump())
  
 
-@router.get("/contacts/{id}")
-async def get_contact():
- pass
+@router.get("/contacts/{id}", response_model=contact_schema.Contact)
+async def get_contact(id: int):
+ return contact_schema.Contact(id)
 
-@router.put("/contacts/{id}")
-async def update_contact():
- pass
+@router.put("/contacts/{id}", response_model=contact_schema.Contact)
+async def update_contact(id: int, body: contact_schema.Contact):
+ return contact_schema.Contact(**body.model_dump())
 
-@router.delete("/contacts/{id}")
-async def delete_contact():
- pass
+@router.delete("/contacts/{id}", response_model=contact_schema.Contact)
+async def delete_contact(id: int):
+ return
