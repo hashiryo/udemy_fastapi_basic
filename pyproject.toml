@@ -10,6 +10,9 @@ dependencies = [
     "uvicorn[standard]>=0.29.0",
     "email-validator>=2.1.1",
     "requests>=2.31.0",
+    "sqlalchemy>=2.0.29",
+    "greenlet>=3.0.3",
+    "aiosqlite>=0.20.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
